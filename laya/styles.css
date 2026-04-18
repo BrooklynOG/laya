@@ -1,31 +1,108 @@
+/* ===== GLOBAL ===== */
 body {
     background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: white;
+    color: #f1f5f9;
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Hide Streamlit default header/footer */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+
+/* ===== HEADER ===== */
 .header {
     text-align: center;
-    padding: 20px;
+    padding: 25px 10px;
+    margin-bottom: 20px;
 }
 
 .header h1 {
-    font-size: 40px;
+    font-size: 42px;
+    font-weight: 700;
     color: #38bdf8;
+    margin-bottom: 5px;
 }
 
+.header p {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+/* ===== INPUT BOX ===== */
+.stTextInput > div > div > input {
+    background-color: #1e293b;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    padding: 10px;
+}
+
+/* ===== BUTTON ===== */
+.stButton button {
+    background: linear-gradient(90deg, #38bdf8, #6366f1);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.stButton button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #0ea5e9, #4f46e5);
+}
+
+/* ===== CHAT BUBBLES ===== */
 .user-msg {
     background: #2563eb;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 12px 15px;
+    border-radius: 12px;
     margin: 10px;
     text-align: right;
+    max-width: 70%;
+    margin-left: auto;
+    font-size: 15px;
 }
 
 .bot-msg {
     background: #334155;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 12px 15px;
+    border-radius: 12px;
     margin: 10px;
     text-align: left;
+    max-width: 70%;
+    margin-right: auto;
+    font-size: 15px;
+}
+
+/* ===== CHAT CONTAINER ===== */
+.chat-container {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+/* ===== CARD STYLE (for future features) ===== */
+.card {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 10px 0;
+    border: 1px solid #334155;
+}
+
+/* ===== TITLES ===== */
+h2, h3 {
+    color: #38bdf8;
 }
